@@ -2,18 +2,25 @@
 #Project Euler #1
 
 
-i = 0
+i = 1000
 k = 0
+threes = 0
+fives = 0
 
-
-for i in range (0,10,3):
-    i += 3
+while i >= 0:
+    i -= 3
+for i in range (0,333,1):
+    threes += 3
+    i += 1
     
-print("3s: ",i)
+print("3s: ",threes)
 
-for k in range (0,10,5):
-    k += 5
+for k in range (0,199,1):
+    fives += 5
+    k += 1
 
-print("5s: ",k)
+print("5s: ",fives)
 
-total = i + k
+total = 
+print("total",total)
+
