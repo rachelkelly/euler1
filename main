@@ -2,31 +2,32 @@
 #Project Euler #1
 
 
-i = 0
-result = 0
-int(result)
-threes = 0
-threebox = []
+a=3
+c=0
+i=999
+totalthree=0
 
-k = 0
-fives = 0
-other = 0 
+k = 995
+d = 5
+e = 0
+totalfive=0
 
-for i in range (0,1000,1):
-    if i/3 == result:
-        threes = threes + 3
-        print(threes)
-        #threebox += [threes]
-    else:
-        print("ERROR")
-    i += 1
+total = 0
 
-for k in range (0,1000,5):
-    if (k/5):
-        fives = fives + 5
-        #print(fives)
-    k += 1
+while i >= 0:
+    a = i
+    c = totalthree + a
+    i=i-3
+    totalthree = c
 
-print("number of threes: ",len(threebox))
-total = fives + threes
-print(total)
+print(totalthree)
+
+while k >= 0:
+    d = k
+    e = totalfive + d
+    k = k-5
+    totalfive = e
+
+print(totalfive)
+total = totalthree + totalfive
+print("total: ",total)
