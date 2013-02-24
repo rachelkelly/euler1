@@ -3,6 +3,8 @@
 
 
 i = 0
+result = 0
+int(result)
 threes = 0
 threebox = []
 
@@ -11,10 +13,12 @@ fives = 0
 other = 0 
 
 for i in range (0,1000,1):
-    if (i/3):
+    if i/3 == result:
         threes = threes + 3
-        #print(threes)
-        threebox += [threes]
+        print(threes)
+        #threebox += [threes]
+    else:
+        print("ERROR")
     i += 1
 
 for k in range (0,1000,5):
