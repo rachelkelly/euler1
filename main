@@ -2,31 +2,29 @@
 #Project Euler #1
 
 
-a=3
 c=0
 i=999
 totalthree=0
 
 k = 995
-d = 5
 e = 0
 totalfive=0
 
 total = 0
 
-while i >= 0:
-    a = i
-    c = totalthree + a
-    i=i-3
+while i > 0:
+    c = totalthree + i
+    i = i-3
     totalthree = c
+    #print(totalthree)
 
 print(totalthree)
 
-while k >= 0:
-    d = k
-    e = totalfive + d
+while k > 0:
+    e = totalfive + k
     k = k-5
     totalfive = e
+    #print(totalfive)
 
 print(totalfive)
 total = totalthree + totalfive
