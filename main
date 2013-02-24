@@ -2,25 +2,14 @@
 #Project Euler #1
 
 
-i = 1000
-k = 0
+i = 0
 threes = 0
-fives = 0
 
-while i >= 0:
-    i -= 3
-for i in range (0,333,1):
-    threes += 3
+for i in range (0,1000,1):
+    if (i/3):
+        threes = threes + 3
+        print(i,"is divisible by 3.")
+        print(threes)
+    else:
+        print(i,"is not divisible by 3.")
     i += 1
-    
-print("3s: ",threes)
-
-for k in range (0,199,1):
-    fives += 5
-    k += 1
-
-print("5s: ",fives)
-
-total = 
-print("total",total)
-
