@@ -4,12 +4,25 @@
 
 i = 0
 threes = 0
+threebox = []
+
+k = 0
+fives = 0
+other = 0 
 
 for i in range (0,1000,1):
     if (i/3):
         threes = threes + 3
-        print(i,"is divisible by 3.")
-        print(threes)
-    else:
-        print(i,"is not divisible by 3.")
+        #print(threes)
+        threebox += [threes]
     i += 1
+
+for k in range (0,1000,5):
+    if (k/5):
+        fives = fives + 5
+        #print(fives)
+    k += 1
+
+print("number of threes: ",len(threebox))
+total = fives + threes
+print(total)
