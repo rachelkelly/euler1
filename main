@@ -14,11 +14,13 @@ total = 0
 
 while i > 0:
     c = totalthree + i
+    print(totalthree,"+",i,"=")
     i = i-3
     totalthree = c
-    #print(totalthree)
+    #print((i//3),":",totalthree)
+    print(c)
 
-print(totalthree)
+#print(totalthree)
 
 while k > 0:
     e = totalfive + k
