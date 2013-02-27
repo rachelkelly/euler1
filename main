@@ -10,6 +10,7 @@ threebox = []
 e = 0
 k = 995
 totalfive = 0
+deletablek = 0
 fivebox = []
 
 total = 0
@@ -30,6 +31,7 @@ input("push enter")
 
 while k > 0:
     e = totalfive + k
+    k = deletablek
     if e in threebox:
         print(e)
         #print(threebox)
@@ -39,16 +41,24 @@ while k > 0:
         print("totalfive remains",totalfive)
         input("push enter.")
     elif e not in threebox:
-        fivebox += [k] #don't think I need a fivebox.  ohwell
-        totalfive += k
-        print(fivebox)
-    else:
-        print("ERROR")
-    if k in threebox:
-        print(k)
+            if deletablek in threebox:
+                print(deletablek)
+                print(deletablek,"duplicate number from threebox, not included")
+                k = deletablek - 5
+            elif deletablek not in threebox:
+                k = k - 5
+            else:
+                print("ERROR")
     #print(totalfive,"+",k,"=")
     #totalfive += k
-    k = k-5
+            fivebox += [k] #don't think I need a fivebox.  ohwell
+            totalfive += k
+        #print(fivebox)
+# RUN A NOTEPAD THROUGH OF THIS
+# CHECK THIS OUT
+# RUN IT ON THROUGH WITH SOME NUMBERS YO
+    else:
+        print("ERROR")
     #print(totalfive)
     #print(e)
     #print(totalfive)
