@@ -32,18 +32,20 @@ while k > 0:
     e = totalfive + k
     if e in threebox:
         print(e)
-        print(threebox)
+        #print(threebox)
         print(e,"duplicate number from previous list, not included")
         e = 0
+        totalfive += e
         print("totalfive remains",totalfive)
         input("push enter.")
-        totalfive += e
     elif e not in threebox:
-        fivebox += [e] #don't think I need a fivebox.  ohwell
+        fivebox += [k] #don't think I need a fivebox.  ohwell
         totalfive += k
-        #print(fivebox)
+        print(fivebox)
     else:
         print("ERROR")
+    if k in threebox:
+        print(k)
     #print(totalfive,"+",k,"=")
     #totalfive += k
     k = k-5
@@ -53,7 +55,7 @@ while k > 0:
 
 #print("threebox:",threebox)
 #input("fuh")
-print("fivebox minus dupes:",fivebox)
+#print("fivebox minus dupes:",fivebox)
 input("cluh")
 totalbox = threebox + fivebox
 print(totalfive)
