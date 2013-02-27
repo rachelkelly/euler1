@@ -2,32 +2,62 @@
 #Project Euler #1
 
 
-c=0
-i=999
-totalthree=0
+c = 0
+i = 999
+totalthree = 0
+threebox = []
 
-k = 995
 e = 0
-totalfive=0
+k = 995
+totalfive = 0
+fivebox = []
 
 total = 0
+totalbox = []
 
 while i > 0:
     c = totalthree + i
-    print(totalthree,"+",i,"=")
+    #print(totalthree,"+",i,"=")
     i = i-3
     totalthree = c
+    threebox += [c]
     #print((i//3),":",totalthree)
-    print(c)
+    #print(c)
+#print("threebox:",threebox)
 
-#print(totalthree)
+print("totalthree",totalthree)
+input("push enter")
 
 while k > 0:
     e = totalfive + k
+    if e in threebox:
+        print(e)
+        print(threebox)
+        print(e,"duplicate number from previous list, not included")
+        e = 0
+        print("totalfive remains",totalfive)
+        input("push enter.")
+        totalfive += e
+    elif e not in threebox:
+        fivebox += [e] #don't think I need a fivebox.  ohwell
+        totalfive += k
+        #print(fivebox)
+    else:
+        print("ERROR")
+    #print(totalfive,"+",k,"=")
+    #totalfive += k
     k = k-5
-    totalfive = e
+    #print(totalfive)
+    #print(e)
     #print(totalfive)
 
+#print("threebox:",threebox)
+#input("fuh")
+print("fivebox minus dupes:",fivebox)
+input("cluh")
+totalbox = threebox + fivebox
 print(totalfive)
-total = totalthree + totalfive
+
+total = c + totalfive
+#print(totalbox)
 print("total: ",total)
