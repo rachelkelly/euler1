@@ -1,75 +1,46 @@
-#Copyright Creative Commons 2013 Rachel Kelly
-#Project Euler #1
+# Hey!  Hey you!  Yeah, you!  Don't read this if you haven't figured it out yourself!
+# Need a hint?  Explore the difference between python's different kinds of division.
 
 
-c = 0
-i = 999
-totalthree = 0
-threebox = []
 
-e = 0
-k = 995
-totalfive = 0
-deletablek = 0
-fivebox = []
 
-total = 0
-totalbox = []
 
-while i > 0:
-    c = totalthree + i
-    #print(totalthree,"+",i,"=")
-    i = i-3
-    totalthree = c
-    threebox += [c]
-    #print((i//3),":",totalthree)
-    #print(c)
-#print("threebox:",threebox)
 
-print("totalthree",totalthree)
-input("push enter")
 
-while k > 0:
-    e = totalfive + k
-    k = deletablek
-    if e in threebox:
-        print(e)
-        #print(threebox)
-        print(e,"duplicate number from previous list, not included")
-        e = 0
-        totalfive += e
-        print("totalfive remains",totalfive)
-        input("push enter.")
-    elif e not in threebox:
-            if deletablek in threebox:
-                print(deletablek)
-                print(deletablek,"duplicate number from threebox, not included")
-                k = deletablek - 5
-            elif deletablek not in threebox:
-                k = k - 5
-            else:
-                print("ERROR")
-    #print(totalfive,"+",k,"=")
-    #totalfive += k
-            fivebox += [k] #don't think I need a fivebox.  ohwell
-            totalfive += k
-        #print(fivebox)
-# RUN A NOTEPAD THROUGH OF THIS
-# CHECK THIS OUT
-# RUN IT ON THROUGH WITH SOME NUMBERS YO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i=1
+threebox = 0
+fivebox = 0
+while i < 1000:
+    if i%3==0:
+        #print (i," fizz!")
+        threebox += i
+    elif i%5==0:
+        #print (i," bang!")
+        fivebox += i
+    elif i%15==0:
+        fivebox -= i
     else:
-        print("ERROR")
-    #print(totalfive)
-    #print(e)
-    #print(totalfive)
+        #print ("not in three/fivebox:",i)
+    i += 1
 
-#print("threebox:",threebox)
-#input("fuh")
-#print("fivebox minus dupes:",fivebox)
-input("cluh")
-totalbox = threebox + fivebox
-print(totalfive)
-
-total = c + totalfive
-#print(totalbox)
-print("total: ",total)
+print (threebox + fivebox)
